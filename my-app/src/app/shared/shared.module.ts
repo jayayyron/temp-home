@@ -1,21 +1,19 @@
 import {NgModule} from '@angular/core';
-import {CommonModule} from '@angular/common';
-import {FormsModule} from '@angular/forms';
+import { TopBarComponent } from './top-bar/top-bar.component';
+import { CoreModule } from '../core/core.module';
 
 @NgModule({
-  imports:
-  [
-    CommonModule, 
-    FormsModule
+  imports: [
+    CoreModule,
   ],
-  declarations: 
-  [],
-  providers: 
-  [],
-  exports: 
-  [
-    CommonModule, 
-    FormsModule, 
+  declarations: [
+    TopBarComponent,
+  ],
+  providers: [
+
+  ],
+  exports: [
+    TopBarComponent,
   ],
 })
 export class SharedModule {}

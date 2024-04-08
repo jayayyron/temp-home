@@ -1,11 +1,37 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { PageNotFoundComponent } from './core/redirect/page-not-found/page-not-found.component';
+import { HomeComponent } from './views/home/home.component';
+
+const appRoutes: Routes = [
+  {
+    path: 'home',
+    component: HomeComponent
+  },
+  { path: '',   redirectTo: '/home', pathMatch: 'full' },
+  { path: '**', component: PageNotFoundComponent }
+];
+
+@NgModule({
+  imports: [
+    RouterModule.forRoot(appRoutes, {
+      // preloadStrategy: PreloadAllModules
+    })
+  ],
+  exports: [
+    RouterModule
+  ]
+})
+export class AppRoutingModule { }
+
+/*import { NgModule } from '@angular/core';
+import { RouterModule, Routes } from '@angular/router';
 
 import { ComposeMessageComponent } from './compose-message/compose-message.component';
-import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 
 import { authGuard } from './auth/auth.guard';
 import { SelectivePreloadingStrategyService } from './selective-preloading-strategy.service';
+import { PageNotFoundComponent } from './core/redirect/page-not-found/page-not-found.component';
 
 const appRoutes: Routes = [
   {
@@ -41,11 +67,4 @@ const appRoutes: Routes = [
     RouterModule
   ]
 })
-export class AppRoutingModule { }
-
-
-/*
-Copyright Google LLC. All Rights Reserved.
-Use of this source code is governed by an MIT-style license that
-can be found in the LICENSE file at https://angular.io/license
-*/
+export class AppRoutingModule { }*/

@@ -1,4 +1,14 @@
-import { Component } from '@angular/core';
+import { Component } from "@angular/core";
+
+@Component({
+  selector: 'app-root',
+  templateUrl: 'app.component.html',
+})
+export class AppComponent {
+ 
+}
+
+/*import { Component } from '@angular/core';
 import { ChildrenOutletContexts } from '@angular/router';
 import { slideInAnimation } from './animations';
 
@@ -14,4 +24,4 @@ export class AppComponent {
   getRouteAnimationData() {
     return this.contexts.getContext('primary')?.route?.snapshot?.data?.['animation'];
   }
-}
+}*/

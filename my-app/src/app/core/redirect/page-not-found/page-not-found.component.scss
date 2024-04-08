@@ -1,0 +1,22 @@
+div {
+    display: flex;
+    position: relative;
+    height: calc(100vh - 320px);
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    z-index: 1;
+}
+div::after {
+    content: "404";
+    position: absolute;
+    top: 50%;
+    color: rgba(0,0,0,0.1);
+    font-size: calc(100vw/3);
+    font-weight: bold;
+    z-index: 0;
+}
+button {
+    margin: 2em;
+    z-index: 2;
+}
