@@ -18,11 +18,6 @@
     max-width: 1000px;
     margin: auto;
   }
-  @media (min-width: 600px) {
-    body {
-      padding: 2rem;
-    }
-  }
   body, input[text] {
     color: #333;
     font-family: Cambria, Georgia, serif;
@@ -80,12 +75,5 @@
     width: 100%;
     padding: .5rem;
   }
-  
-  
-  /*
-  Copyright Google LLC. All Rights Reserved.
-  Use of this source code is governed by an MIT-style license that
-  can be found in the LICENSE file at https://angular.io/license
-  */
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }

@@ -1,8 +1,63 @@
-<app-top-bar></app-top-bar>
+<header>
+  <mat-toolbar #appToolbar color="primary" class="app-toolbar">
+    <button mat-icon-button class="sidenavButton" (click)="sidenav.toggle()">
+      <mat-icon>menu</mat-icon>
+    </button>
+    <a [routerLink]="['/home']">
+      <mat-icon>home</mat-icon>
+    </a>
+    <nav>
+      <a routerLink="/crisis-center" routerLinkActive="active" ariaCurrentWhenActive="page">Who we are</a>
+      <a routerLink="/superheroes" routerLinkActive="active" ariaCurrentWhenActive="page">Investers</a>
+      <a routerLink="/admin" routerLinkActive="active" ariaCurrentWhenActive="page">News and views</a>
+      <a routerLink="/login" routerLinkActive="active" ariaCurrentWhenActive="page">Careers</a>
+    </nav>
+  </mat-toolbar>
+</header>
 
-<div id="page-content">
-  <router-outlet></router-outlet>
-</div>
+<mat-sidenav-container class="sidenav-container">
+  <mat-sidenav #sidenav mode="side">
+      <a routerLink="/crisis-center">Who we are</a>
+  </mat-sidenav>
+  <mat-sidenav-content>
+    <router-outlet></router-outlet>
+  </mat-sidenav-content>
+</mat-sidenav-container>
+
+<footer>
+  <mat-toolbar color="secondary">
+    <mat-toolbar-row>
+      <nav>
+        <a routerLink="/crisis-center">Who we are</a>
+        <a routerLink="/superheroes">Investers</a>
+        <a routerLink="/admin">News and views</a>
+        <a routerLink="/login">Careers</a>
+      </nav>
+    </mat-toolbar-row>
+  
+    <mat-toolbar-row>
+      <mat-icon>youtube</mat-icon>
+      <nav>
+        <a routerLink="/crisis-center">Who we are</a>
+        <a routerLink="/superheroes">Investers</a>
+        <a routerLink="/admin">News and views</a>
+        <a routerLink="/login">Careers</a>
+      </nav>
+    </mat-toolbar-row>
+  
+    <mat-toolbar-row>
+      <span>Copyright sign Company Name 2024</span>
+      <nav>
+        <a routerLink="/crisis-center">Terms and conditions</a>
+        <a routerLink="/superheroes">Privacy notice</a>
+        <a routerLink="/admin">Cookie notice</a>
+        <a routerLink="/login">Website accessiblity</a>
+        <a routerLink="/admin">Online security</a>
+        <a routerLink="/login">Sitemap</a>
+      </nav>
+    </mat-toolbar-row>
+  </mat-toolbar>
+</footer>
 
 
 <!--

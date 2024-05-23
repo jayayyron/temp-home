@@ -8,7 +8,7 @@ import { SharedModule } from "./shared/shared.module";
   imports: [
     CoreModule,
     SharedModule,
-    AppRoutingModule
+    AppRoutingModule  //must be last
   ],
   declarations: [
     AppComponent

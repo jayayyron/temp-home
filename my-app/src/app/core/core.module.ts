@@ -13,7 +13,6 @@ import { PageNotFoundComponent } from "./redirect/page-not-found/page-not-found.
         BrowserAnimationsModule,
         CommonModule,
         HttpClientModule,
-        
         RouterModule,
     ],
     exports: [

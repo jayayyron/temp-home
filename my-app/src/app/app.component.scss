@@ -1,3 +1,29 @@
-nav a {
-    padding: 1rem;
-  }
+// VARIABLES
+$showTopMenuWidth: 760px;
+$hideTopMenuWidth: $showTopMenuWidth - 1;
+$hamburgerShownMargin: 0 8px 0 0;
+$hamburgerHiddenMargin: 0 16px 0 -64px;
+
+.app-toolbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 99;
+  //box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.3);
+}
+
+@media screen and (max-width: $showTopMenuWidth) {
+    .sidenavButton {
+      visibility: visible;
+    }
+}
+
+@media screen and (min-width: $hideTopMenuWidth) {
+    .sidenavButton {
+      visibility: hidden;
+    }
+}
+
+mat-sidenav-content{
+  padding-top: 3.5rem;
+}
